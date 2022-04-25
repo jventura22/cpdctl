@@ -9,4 +9,4 @@ tar -xvf cpdctl_linux_amd64.tar.gz
 chmod a+rw $CPDCONFIG
 
 echo "Installed cpdctl in version:"
-./cpdctl version
+sudo ./cpdctl version
