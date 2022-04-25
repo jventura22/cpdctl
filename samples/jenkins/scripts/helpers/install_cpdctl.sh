@@ -9,4 +9,4 @@ tar -xvf cpdctl_darwin_amd64.tar.gz
 chmod a+rw $CPDCONFIG
 
 echo "Installed cpdctl in version:"
-sudo ./cpdctl version
+./cpdctl version
