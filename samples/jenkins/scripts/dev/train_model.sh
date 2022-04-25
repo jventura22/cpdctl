@@ -3,8 +3,8 @@ export PATH=$PATH:$PWD
 #
 # Expected environment variables:
 #
-# $PROJECT_ID - ID of the source project
-# $DEV_SPACE_ID - ID of the development deployment space
+# PROJECT_ID=d6f3d98b-ec78-4d2a-87fa-3bbe1ad3fb53
+# DEV_SPACE_ID=986def6d-27bb-4887-aeeb-579874709e3d
 #
 
 env_name=jupconda38
@@ -31,9 +31,12 @@ env_id=$(cpdctl environment list --output json -j "resources[?metadata.name=='$e
 echo "Using notebook environment '$env_name': $env_id"
 
 cpd_url=$(cpdctl config profile get cpd --output json -j 'Profile.URL' --raw-output)
+echo 1
 # assume there is only single user configured
 user_name=$(cpdctl config user list --output json -j '[0].Name' --raw-output)
-user_apikey=$(cpdctl config user get demouser --output json -j "User.Apikey.Value" --raw-output)
+echo 2
+user_apikey=$(cpdctl config user get jaimev --output json -j "User.Password.Value" --raw-output)
+echo $user_apikey
 
 cat > job.json <<-EOJSON
 {
@@ -45,7 +48,7 @@ cat > job.json <<-EOJSON
         "env_variables": [
             "CPD_URL=$cpd_url",
             "USER_NAME=$user_name",
-            "USER_APIKEY=$user_apikey",
+            "USER_PASSWORD=$user_apikey",
             "DATA_ASSET_ID=$training_data_asset_id",
             "MODEL_NAME=$model_name"
         ]
