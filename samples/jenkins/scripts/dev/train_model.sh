@@ -6,7 +6,7 @@ export PATH=$PATH:$PWD
 # PROJECT_ID=d6f3d98b-ec78-4d2a-87fa-3bbe1ad3fb53
 # DEV_SPACE_ID=986def6d-27bb-4887-aeeb-579874709e3d
 #
-
+PATH=$PATH:/usr/local/bin
 env_name=jupconda38
 job_name=train-scikit-model-job
 model_name=gcr-scikit-model
