@@ -1,5 +1,5 @@
 export PATH=$PATH:$PWD
-
+PATH=$PATH:/usr/local/bin
 #
 # Expected environment variables:
 #
