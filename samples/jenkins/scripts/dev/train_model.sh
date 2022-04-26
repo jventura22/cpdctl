@@ -8,7 +8,7 @@ export PATH=$PATH:$PWD
 #
 PATH=$PATH:/usr/local/bin
 env_name=jupconda38
-job_name=train-scikit-model-job
+job_name=train-scikit-model-job-jv
 model_name=gcr-scikit-model
 trained_model_id_file=./trained_model_id
 
