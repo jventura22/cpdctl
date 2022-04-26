@@ -7,7 +7,7 @@ node {
         }
 
         stage('Import assets') {
-            copyArtifacts fingerprintArtifacts: true, projectName: 'cpdctl-demo-folder/model-lifecycle-demo-dev-pipeline', selector: lastSuccessful()
+            copyArtifacts fingerprintArtifacts: true, projectName: 'development_no_git', selector: lastSuccessful()
             sh 'bash -e ./samples/jenkins/scripts/test/create_test_space.sh'
         }
 
