@@ -25,7 +25,7 @@ find_asset () {
 
 training_data_asset_id=$(find_asset data_asset "credit_risk_training.csv")
 regression_data_asset_id=$(find_asset data_asset "credit_risk_regression.csv")
-notebook_id=$(find_asset notebook "train_model")
+notebook_id=$(find_asset notebook "train_model_jv")
 
 env_id=$(cpdctl environment list --output json -j "resources[?metadata.name=='$env_name'] | [0].metadata.asset_id" --raw-output)
 echo "Using notebook environment '$env_name': $env_id"
