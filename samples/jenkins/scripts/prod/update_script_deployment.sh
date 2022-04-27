@@ -47,11 +47,11 @@ echo "Results : $output_data_asset_id for a run: $run_id..."
 results_attachment_id=$(cpdctl asset get --asset-id "$output_data_asset_id" \
   --output json --jmes-query "attachments[-1].id" --raw-output)
 
-echo "Downloading: $evaluation_output_name to the $results_path..."
+#echo "Downloading: $evaluation_output_name to the $results_path..."
 
-cpdctl asset attachment download --asset-id "$output_data_asset_id" \
-  --attachment-id "$results_attachment_id" --output-path "$results_path"
+#cpdctl asset attachment download --asset-id "$output_data_asset_id" \
+#  --attachment-id "$results_attachment_id" --output-path "$results_path"
 
-echo "Unziping $results_path to results.txt"
+#echo "Unziping $results_path to results.txt"
 
-unzip -p "$results_path" results.txt
+#unzip -p "$results_path" results.txt
