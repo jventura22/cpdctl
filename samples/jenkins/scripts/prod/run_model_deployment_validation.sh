@@ -24,14 +24,14 @@ echo "Run starting for a job: $evaluate_model_job_id..."
 
 cpdctl job run create --job-id "$evaluate_model_job_id" --job-run '{}'
 
-results_asset_id=$(find_asset data_asset "evaluation_result.zip")
+#results_asset_id=$(find_asset data_asset "evaluation_result.zip")
 
-results_attachment_id=$(cpdctl asset get --asset-id $results_asset_id --output json --jmes-query "attachments[-1].id" --raw-output)
+#results_attachment_id=$(cpdctl asset get --asset-id $results_asset_id --output json --jmes-query "attachments[-1].id" --raw-output)
 
 echo "Downloading: evaluation_result.zip to the $export_file..."
 
-cpdctl asset attachment download --asset-id "$results_asset_id" --attachment-id "$results_attachment_id" --output-path "${export_file}"
+#cpdctl asset attachment download --asset-id "$results_asset_id" --attachment-id "$results_attachment_id" --output-path "${export_file}"
 
-echo "Unziping $export_file"
+#echo "Unziping $export_file"
 
-unzip -p ${export_file}
+#unzip -p ${export_file}
