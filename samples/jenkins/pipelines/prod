@@ -17,7 +17,7 @@ node {
 
         stage('Evaluate model') {
             sh 'bash -e ./samples/jenkins/scripts/prod/run_model_deployment_validation.sh'
-            archiveArtifacts artifacts: 'evaluation_result.zip', fingerprint: true
+            //archiveArtifacts artifacts: 'evaluation_result.zip', fingerprint: true
         }
 
         stage('Update evaluation script deployment') {
