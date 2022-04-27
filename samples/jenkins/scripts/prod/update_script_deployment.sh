@@ -19,7 +19,7 @@ find_asset () {
   echo $asset_id
 }
 
-prod_evaluation_script_id=$(find_asset script 'evaluate_model')
+prod_evaluation_script_id=$(find_asset script 'evaluate_model.py')
 echo "Evaluation script id: $prod_evaluation_script_id"
 
 prod_script_deployment_id=$(cpdctl ml deployment list --name "$deployment_name" --output json \
