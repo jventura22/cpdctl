@@ -7,7 +7,7 @@ node {
         }
 
         stage('Import assets') {
-            copyArtifacts fingerprintArtifacts: true, projectName: 'development_no_git', selector: lastSuccessful()
+            copyArtifacts fingerprintArtifacts: true, projectName: 'desarrollo', selector: lastSuccessful()
             sh 'bash -e ./samples/jenkins/scripts/test/create_test_space.sh'
         }
 
