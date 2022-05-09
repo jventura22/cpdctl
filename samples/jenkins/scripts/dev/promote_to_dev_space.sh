@@ -13,6 +13,8 @@ trained_model_id_file=./trained_model_id
 
 export CPD_SCOPE=cpd://cpd/projects/$PROJECT_ID
 
+echo $DEV_SPACE_ID
+
 find_asset () {
   echo "Searching for $1 with name: $2..." >&2
   asset_id=$(cpdctl asset search --type-name $1 --query "asset.name:$2" \
